@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Changelogger::BranchWindow
+  
+    &mdash; Changelogger Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Changelogger::BranchWindow";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (B)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Changelogger.html" title="Changelogger (module)">Changelogger</a></span></span>
+     &raquo; 
+    <span class="title">BranchWindow</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Changelogger::BranchWindow
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Changelogger::BranchWindow</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/changelogger/branches_window.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p><code>Changelogger::BranchWindow</code> is the left-right split TUI with live preview.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="CP_HELP-constant" class="">CP_HELP =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Color pair IDs used within curses</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>2</span></pre></dd>
+      
+        <dt id="CP_HIGHLIGHT-constant" class="">CP_HIGHLIGHT =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>current cursor commit block</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>3</span></pre></dd>
+      
+        <dt id="CP_SELECTED-constant" class="">CP_SELECTED =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>selected anchor commit header</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>4</span></pre></dd>
+      
+        <dt id="CP_SEP-constant" class="">CP_SEP =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>thin separators</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>5</span></pre></dd>
+      
+        <dt id="CP_ALT-constant" class="">CP_ALT =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>zebra alt shading</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>6</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#selected_shas-instance_method" title="#selected_shas (instance method)">#<strong>selected_shas</strong>  &#x21d2; Array&lt;String&gt;<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Selected SHAs after Enter, or nil if cancelled.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(max_height: 50, top: 1, left: 0, left_width: nil)  &#x21d2; BranchWindow </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><code>Changelogger::BranchWindow.new</code>               -&gt; Changelogger::BranchWindow.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select_commits-instance_method" title="#select_commits (instance method)">#<strong>select_commits</strong>  &#x21d2; Array&lt;String&gt;<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><tt>Changelogger::BranchWindow#select_commits</tt>    -&gt; Array&lt;String&gt;, nil.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(max_height: 50, top: 1, left: 0, left_width: nil)  &#x21d2; <tt><span class='object_link'><a href="" title="Changelogger::BranchWindow (class)">BranchWindow</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><code>Changelogger::BranchWindow.new</code>               -&gt; Changelogger::BranchWindow</p>
+
+<p>Builds the UI panes (graph on the left, preview on the right) and prepares state for selection and scrolling.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>max_height</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>50</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>maximum height for the panes</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>top</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>1</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>top offset</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>left</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>left offset</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>left_width</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>optional fixed width for the left pane</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/changelogger/branches_window.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>max_height:</span> <span class='int'>50</span><span class='comma'>,</span> <span class='label'>top:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>left:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>left_width:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='ivar'>@top</span>   <span class='op'>=</span> <span class='id identifier rubyid_top'>top</span>
+  <span class='ivar'>@left</span>  <span class='op'>=</span> <span class='id identifier rubyid_left'>left</span>
+  <span class='ivar'>@width</span> <span class='op'>=</span> <span class='const'>Curses</span><span class='period'>.</span><span class='id identifier rubyid_cols'>cols</span> <span class='op'>-</span> <span class='ivar'>@left</span>
+  <span class='id identifier rubyid_screen_height'>screen_height</span> <span class='op'>=</span> <span class='const'>Curses</span><span class='period'>.</span><span class='id identifier rubyid_lines'>lines</span>
+  <span class='ivar'>@height</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_screen_height'>screen_height</span> <span class='op'>-</span> <span class='ivar'>@top</span><span class='comma'>,</span> <span class='id identifier rubyid_max_height'>max_height</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_min'>min</span>
+
+  <span class='ivar'>@repo</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Changelogger.html" title="Changelogger (module)">Changelogger</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Repo.html" title="Changelogger::Repo (class)">Repo</a></span></span><span class='period'>.</span><span class='id identifier rubyid_info'><span class='object_link'><a href="Repo.html#info-class_method" title="Changelogger::Repo.info (method)">info</a></span></span>
+
+  <span class='ivar'>@lines</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Graph.html" title="Changelogger::Graph (class)">Graph</a></span></span><span class='period'>.</span><span class='id identifier rubyid_build'><span class='object_link'><a href="Graph.html#build-class_method" title="Changelogger::Graph.build (method)">build</a></span></span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_preferred_left'>preferred_left</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Graph.html" title="Changelogger::Graph (class)">Graph</a></span></span><span class='period'>.</span><span class='id identifier rubyid_width'><span class='object_link'><a href="Graph.html#width-class_method" title="Changelogger::Graph.width (method)">width</a></span></span> <span class='op'>+</span> <span class='int'>4</span>
+  <span class='ivar'>@left_min</span>  <span class='op'>=</span> <span class='int'>24</span>
+  <span class='ivar'>@right_min</span> <span class='op'>=</span> <span class='int'>28</span>
+  <span class='ivar'>@left_w</span> <span class='op'>=</span> <span class='id identifier rubyid_compute_left_width'>compute_left_width</span><span class='lparen'>(</span><span class='label'>requested_left:</span> <span class='id identifier rubyid_left_width'>left_width</span> <span class='op'>||</span> <span class='id identifier rubyid_preferred_left'>preferred_left</span><span class='rparen'>)</span>
+
+  <span class='comment'># Graph state
+</span>  <span class='ivar'>@headers</span> <span class='op'>=</span> <span class='id identifier rubyid_detect_headers'>detect_headers</span><span class='lparen'>(</span><span class='ivar'>@lines</span><span class='rparen'>)</span>
+  <span class='ivar'>@selected_header_idx</span>  <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@selected_header_idxs</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@offset</span>          <span class='op'>=</span> <span class='int'>0</span>
+  <span class='ivar'>@fit_full_block</span>  <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='ivar'>@zebra_blocks</span>    <span class='op'>=</span> <span class='kw'>true</span>
+
+  <span class='id identifier rubyid_recompute_blocks!'>recompute_blocks!</span>
+
+  <span class='comment'># Preview state
+</span>  <span class='ivar'>@commits</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Changelogger.html" title="Changelogger (module)">Changelogger</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Git.html" title="Changelogger::Git (class)">Git</a></span></span><span class='period'>.</span><span class='id identifier rubyid_commits'><span class='object_link'><a href="Git.html#commits-class_method" title="Changelogger::Git.commits (method)">commits</a></span></span>
+  <span class='ivar'>@preview_lines</span>  <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@preview_offset</span> <span class='op'>=</span> <span class='int'>0</span>
+
+  <span class='ivar'>@focus</span> <span class='op'>=</span> <span class='symbol'>:left</span>
+  <span class='ivar'>@cancelled</span> <span class='op'>=</span> <span class='kw'>false</span>
+
+  <span class='id identifier rubyid_setup_windows'>setup_windows</span>
+  <span class='id identifier rubyid_init_colors'>init_colors</span>
+  <span class='id identifier rubyid_update_titles'>update_titles</span>
+  <span class='id identifier rubyid_update_preview'>update_preview</span><span class='lparen'>(</span><span class='label'>reset_offset:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ensure_visible'>ensure_visible</span>
+  <span class='id identifier rubyid_redraw'>redraw</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="selected_shas-instance_method">
+  
+    #<strong>selected_shas</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt><sup>?</sup>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns selected SHAs after Enter, or nil if cancelled.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>selected SHAs after Enter, or nil if cancelled</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/changelogger/branches_window.rb', line 57</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_selected_shas'>selected_shas</span>
+  <span class='ivar'>@selected_shas</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="select_commits-instance_method">
+  
+    #<strong>select_commits</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><tt>Changelogger::BranchWindow#select_commits</tt>    -&gt; Array&lt;String&gt;, nil</p>
+
+<p>Enters the TUI input loop and returns when user confirms or cancels.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>anchor SHAs (2+ required) or nil when cancelled</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+120
+121
+122
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/changelogger/branches_window.rb', line 120</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_select_commits'>select_commits</span>
+  <span class='id identifier rubyid_handle_keyboard_input'>handle_keyboard_input</span>
+  <span class='ivar'>@cancelled</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='lparen'>(</span><span class='ivar'>@selected_shas</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+<span class='kw'>ensure</span>
+  <span class='id identifier rubyid_teardown'>teardown</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Nov  6 02:01:01 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.4.7).
+</div>
+
+    </div>
+  </body>
+</html>

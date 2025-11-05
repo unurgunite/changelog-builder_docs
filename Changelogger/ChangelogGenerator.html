@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Changelogger::ChangelogGenerator
+  
+    &mdash; Changelogger Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Changelogger::ChangelogGenerator";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Changelogger.html" title="Changelogger (module)">Changelogger</a></span></span>
+     &raquo; 
+    <span class="title">ChangelogGenerator</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Changelogger::ChangelogGenerator
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Changelogger::ChangelogGenerator</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/changelogger/changelog_generator.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Changelog generator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_sections-class_method" title="build_sections (class method)">.<strong>build_sections</strong>(versioned)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><code>Changelogger::ChangelogGenerator.build_sections</code>                      -&gt; String.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#generate-class_method" title="generate (class method)">.<strong>generate</strong>(commits, anchor_shas, path: &quot;CHANGELOG.md&quot;, major: 0, minor_start: 1, base_patch: 10)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><code>Changelogger::ChangelogGenerator.generate</code>                            -&gt; String.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render-class_method" title="render (class method)">.<strong>render</strong>(commits, anchor_shas, major: 0, minor_start: 1, base_patch: 10)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p><code>Changelogger::ChangelogGenerator.render</code>                              -&gt; String.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="build_sections-class_method">
+  
+    .<strong>build_sections</strong>(versioned)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><code>Changelogger::ChangelogGenerator.build_sections</code>                      -&gt; String</p>
+
+<p>Build sections from versioned commits.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>versioned</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;(Integer, <span class='object_link'><a href="Commit.html" title="Changelogger::Commit (class)">Changelogger::Commit</a></span>, String)&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/changelogger/changelog_generator.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_build_sections'>build_sections</span><span class='lparen'>(</span><span class='id identifier rubyid_versioned'>versioned</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_versioned'>versioned</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='lparen'>(</span><span class='id identifier rubyid__i'>_i</span><span class='comma'>,</span> <span class='id identifier rubyid_c'>c</span><span class='comma'>,</span> <span class='id identifier rubyid_v'>v</span><span class='rparen'>)</span><span class='op'>|</span>
+    <span class='id identifier rubyid_lines'>lines</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_lines'>lines</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>## [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_v'>v</span><span class='embexpr_end'>}</span><span class='tstring_content'>] - </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_date'>date</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_lines'>lines</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_lines'>lines</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>- </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_subject'>subject</span><span class='embexpr_end'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_short'>short</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_b'>b</span><span class='op'>|</span> <span class='id identifier rubyid_lines'>lines</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_b'>b</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span> <span class='kw'>unless</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_lines'>lines</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_lines'>lines</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="generate-class_method">
+  
+    .<strong>generate</strong>(commits, anchor_shas, path: &quot;CHANGELOG.md&quot;, major: 0, minor_start: 1, base_patch: 10)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><code>Changelogger::ChangelogGenerator.generate</code>                            -&gt; String</p>
+
+<p>Generate the changelog file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>commits</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Commit.html" title="Changelogger::Commit (class)">Changelogger::Commit</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>anchor_shas</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>path</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&quot;CHANGELOG.md&quot;</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>major</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>minor_start</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>1</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>base_patch</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>10</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>path</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/changelogger/changelog_generator.rb', line 63</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_generate'>generate</span><span class='lparen'>(</span><span class='id identifier rubyid_commits'>commits</span><span class='comma'>,</span> <span class='id identifier rubyid_anchor_shas'>anchor_shas</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CHANGELOG.md</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>major:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>minor_start:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>base_patch:</span> <span class='int'>10</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='id identifier rubyid_commits'>commits</span><span class='comma'>,</span> <span class='id identifier rubyid_anchor_shas'>anchor_shas</span><span class='comma'>,</span> <span class='label'>major:</span> <span class='id identifier rubyid_major'>major</span><span class='comma'>,</span> <span class='label'>minor_start:</span> <span class='id identifier rubyid_minor_start'>minor_start</span><span class='comma'>,</span> <span class='label'>base_patch:</span> <span class='id identifier rubyid_base_patch'>base_patch</span><span class='rparen'>)</span>
+  <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_path'>path</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="render-class_method">
+  
+    .<strong>render</strong>(commits, anchor_shas, major: 0, minor_start: 1, base_patch: 10)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p><code>Changelogger::ChangelogGenerator.render</code>                              -&gt; String</p>
+
+<p>Render the changelog content.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>commits</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Commit.html" title="Changelogger::Commit (class)">Changelogger::Commit</a></span>&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>anchor_shas</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>major</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>minor_start</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>1</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>base_patch</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>10</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/changelogger/changelog_generator.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='id identifier rubyid_commits'>commits</span><span class='comma'>,</span> <span class='id identifier rubyid_anchor_shas'>anchor_shas</span><span class='comma'>,</span> <span class='label'>major:</span> <span class='int'>0</span><span class='comma'>,</span> <span class='label'>minor_start:</span> <span class='int'>1</span><span class='comma'>,</span> <span class='label'>base_patch:</span> <span class='int'>10</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sha_to_idx'>sha_to_idx</span> <span class='op'>=</span> <span class='id identifier rubyid_commits'>commits</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:sha</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_short_to_idx'>short_to_idx</span> <span class='op'>=</span> <span class='id identifier rubyid_commits'>commits</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:short</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_anchor_indices'>anchor_indices</span> <span class='op'>=</span> <span class='id identifier rubyid_anchor_shas'>anchor_shas</span><span class='period'>.</span><span class='id identifier rubyid_filter_map'>filter_map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_sha'>sha</span><span class='op'>|</span>
+    <span class='id identifier rubyid_full_idx'>full_idx</span> <span class='op'>=</span> <span class='id identifier rubyid_sha_to_idx'>sha_to_idx</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_sha'>sha</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_full_idx'>full_idx</span> <span class='op'>||</span> <span class='id identifier rubyid_short_to_idx'>short_to_idx</span><span class='period'>.</span><span class='id identifier rubyid_index'>index</span><span class='lparen'>(</span><span class='id identifier rubyid_sha'>sha</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>7</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Need at least 2 valid commits selected</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_anchor_indices'>anchor_indices</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>&lt;</span> <span class='int'>2</span>
+
+  <span class='id identifier rubyid_versioned'>versioned</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Versioner.html" title="Changelogger::Versioner (class)">Versioner</a></span></span><span class='period'>.</span><span class='id identifier rubyid_assign'><span class='object_link'><a href="Versioner.html#assign-class_method" title="Changelogger::Versioner.assign (method)">assign</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_commits'>commits</span><span class='comma'>,</span> <span class='id identifier rubyid_anchor_indices'>anchor_indices</span><span class='comma'>,</span> <span class='label'>major:</span> <span class='id identifier rubyid_major'>major</span><span class='comma'>,</span> <span class='label'>minor_start:</span> <span class='id identifier rubyid_minor_start'>minor_start</span><span class='comma'>,</span>
+                                                        <span class='label'>base_patch:</span> <span class='id identifier rubyid_base_patch'>base_patch</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_header'>header</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>## [Unreleased]\n\n</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_sections'>sections</span> <span class='op'>=</span> <span class='id identifier rubyid_build_sections'>build_sections</span><span class='lparen'>(</span><span class='id identifier rubyid_versioned'>versioned</span><span class='rparen'>)</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_header'>header</span><span class='comma'>,</span> <span class='id identifier rubyid_sections'>sections</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Nov  6 02:01:01 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.37 (ruby-3.4.7).
+</div>
+
+    </div>
+  </body>
+</html>
